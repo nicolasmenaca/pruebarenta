@@ -25,6 +25,7 @@ public class Propiedades implements Serializable {
     private String nombre;
     private String ubicacion;
     private Boolean disponibilidad;
+    @Column(length = 500)
     private String url;
     private BigDecimal precio;
 
