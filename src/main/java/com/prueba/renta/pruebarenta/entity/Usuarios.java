@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 
 @NoArgsConstructor
@@ -15,22 +14,19 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Entity
-@Table(name = "propiedades")
-public class Propiedades implements Serializable {
-
+@Table(name = "usuarios")
+public class Usuarios implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+    private String apellido;
+    private Integer dni;
+    private Integer edad;
+    private String correo;
+    private Integer numeroTelefono;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ciudad_id")
-    private Ciudades ciudad;
-    private Boolean disponibilidad;
-    @Column(length = 500)
-    private String url;
-    private BigDecimal precio;
 
 
 
